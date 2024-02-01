@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ListRace</title>
+    <!-- for favicon icon  -->
+    <link
+      rel="shortcut icon"
+      type="image/icon"
+      href="/assets/logo/favicon.png"
+    />
+    <!-- css src link  -->
+    <link href="./output.css" rel="stylesheet" />
+    <!-- font family  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- flat icon link  -->
+    <link rel="stylesheet" href="/assets/css/flaticon.css" />
+  </head>
+  <body class="bg-gray-200 font-display">
+    <nav class="bg-white sticky top-0 z-50">
+      <div class="container flex justify-between items-center py-4 px-2">
+        <a href="#Home" class="text-black font-bold text-2xl"
+          >List<span class="text-orange-500">Race</span></a
+        >
+        <ul
+          class="nav-links flex md:flex-row flex-col md:gap-x-7 md:static absolute top-[-300px] right-0 items-center bg-white w-full md:w-fit gap-y-3 md:gap-y-0 py-4 duration-300"
+        >
+          <li
+            class="nav-items font-medium hover:text-orange-500 duration-300 text-base"
+          >
+            <a href="#Home">HOME</a>
+          </li>
+          <li
+            class="nav-items font-medium hover:text-orange-500 duration-300 text-base"
+          >
+            <a href="#how-it-work">HOW IT WORKS</a>
+          </li>
+          <li
+            class="nav-items font-medium hover:text-orange-500 duration-300 text-base"
+          >
+            <a href="#Explore">EXPLORE</a>
+          </li>
+          <li
+            class="nav-items font-medium hover:text-orange-500 duration-300 text-base"
+          >
+            <a href="#Review">REVIEW</a>
+          </li>
+          <li
+            class="nav-items font-medium hover:text-orange-500 duration-300 text-base"
+          >
+            <a href="#Blog">BLOG</a>
+          </li>
+          <li
+            class="nav-items font-medium hover:text-orange-500 duration-300 text-base"
+          >
+            <a href="#Contact">CONTACT</a>
+          </li>
+        </ul>
+        <img
+          onclick="onToggleMenu(this)"
+          class="w-6 md:hidden"
+          src="/assets/images/toggle icons/burger-bar.png"
+          alt=""
+        />
+      </div>
+    </nav>
+    <!-- nav bar end  -->
+    <!-- hero section starts  -->
+    <header id="Home" class="w-full mx-auto relative">
+      <div
+        class="bg-[url('/assets/images/welcome-hero/banner.jpg')] h-screen bg-center bg-no-repeat bg-cover"
+      >
+        <div class="bg-slate-800/40 h-screen flex items-center justify-center">
+          <div
+            class="container mx-auto px-2 flex flex-col md:justify-center md:items-center md:gap-y-10 gap-y-5"
+          >
+            <h1
+              class="text-slate-50 text-center font-extrabold text-3xl md:text-5xl md:font-bold leading-8 tracking-wide"
+            >
+              BEST PLACE TO FIND AND EXPLORE <br />THAT ALL YOU NEED
+            </h1>
+            <p class="text-lg text-gray-100 text-center">
+              Find Best Place, Restaurant, Hotel, Real State and many more think
+              in just One click
+            </p>
+            <div class="flex flex-col md:flex-row gap-y-4">
+              <div
+                class="bg-slate-100 flex flex-col md:flex-row justify-between items-center gap-y-3 md:gap-0 p-4 rounded-sm md:rounded-none md:border-r-[1px] md:border-gray-400"
+              >
+                <h2 class="text-center">What?</h2>
+                <input
+                  class="bg-transparent py-1 px-3 outline-none w-3/4"
+                  type="text"
+                  placeholder="Ex: Palce, Resturent, Food, Automobile"
+                />
+
+                <img
+                  class="w-5 cursor-pointer"
+                  src="/assets/images/welcome-hero/list.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="bg-slate-100 flex flex-col md:flex-row justify-between items-center gap-y-3 p-4 rounded-sm md:rounded-none"
+              >
+                <h2 class="text-center">Location</h2>
+                <input
+                  class="bg-transparent py-1 px-3 outline-none w-3/4"
+                  type="text"
+                  placeholder="Ex: london, newyork, rome"
+                />
+
+                <img
+                  class="w-5 cursor-pointer"
+                  src="/assets/images/welcome-hero/crosshair.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="bg-orange-500 flex justify-center items-center gap-1 w-auto px-20 py-4 rounded-md hover:bg-orange-600 duration-300 mx-auto md:ml-4"
+              >
+                <button class="text-white">Search</button>
+                <img
+                  class="w-5"
+                  src="/assets/images/welcome-hero/loupe.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end hero section  -->
+    </header>
+    <!-- end header section  -->
+    <section class="w-full container">
+      <div class="container mx-auto md:absolute md:top-[100vh]">
+        <div
+          class="grid sm:grid-cols-2 md:grid-cols-5 gap-3 justify-items-center sm:mx-5 mt-4 md:mt-0"
+        >
+          <div
+            class="bg-white flex flex-col items-center gap-y-1 py-5 w-3/5 sm:w-full shadow-md group hover:bg-orange-500 duration-300"
+          >
+            <i class="flaticon-restaurant group-hover:text-white"></i>
+            <h2 class="text-xl font-medium group-hover:text-white">
+              Resturent
+            </h2>
+            <p class="group-hover:text-white">150 listings</p>
+          </div>
+          <div
+            class="bg-white flex flex-col items-center gap-y-1 py-5 w-3/5 sm:w-full shadow-md group hover:bg-orange-500 duration-300"
+          >
+            <i class="flaticon-travel group-hover:text-white"></i>
+            <h2 class="text-xl font-medium group-hover:text-white">
+              Destination
+            </h2>
+            <p class="group-hover:text-white">214 listings</p>
+          </div>
+          <div
+            class="bg-white flex flex-col items-center gap-y-1 py-5 w-3/5 sm:w-full shadow-md group hover:bg-orange-500 duration-300"
+          >
+            <i class="flaticon-building group-hover:text-white"></i>
+            <h2 class="text-xl font-medium group-hover:text-white">Hotels</h2>
+            <p class="group-hover:text-white">185 listings</p>
+          </div>
+          <div
+            class="bg-white flex flex-col items-center gap-y-1 py-5 w-3/5 sm:w-full shadow-md group hover:bg-orange-500 duration-300"
+          >
+            <i class="flaticon-pills group-hover:text-white"></i>
+            <h2 class="text-xl font-medium group-hover:text-white">
+              Healthcaree
+            </h2>
+            <p class="group-hover:text-white">200 listings</p>
+          </div>
+          <div
+            class="bg-white flex flex-col items-center gap-y-1 py-5 w-3/5 sm:w-full shadow-md group hover:bg-orange-500 duration-300"
+          >
+            <i class="flaticon-transport group-hover:text-white"></i>
+            <h2 class="text-xl font-medium group-hover:text-white">
+              Automotion
+            </h2>
+            <p class="group-hover:text-white">120 listings</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- how it work section starts here -->
+    <section id="how-it-work" class="w-full mt-40">
+      <div class="container mx-auto">
+        <div class="mb-10">
+          <h1 class="text-gray-800 text-center font-medium text-4xl">
+            HOW IT WORKS
+          </h1>
+          <p class="text-center text-gray-700 mt-2">
+            Learn More about how our website works
+          </p>
+        </div>
+        <div
+          class="grid sm:grid-cols-2 md:grid-cols-3 justify-items-center gap-4 mx-2"
+        >
+          <div
+            class="bg-white flex flex-col items-center justify-center gap-y-5 p-10 group hover:bg-orange-500 duration-300 max-w-96 shadow-md"
+          >
+            <i
+              class="flaticon-lightbulb-idea bg-slate-200 rounded-full text-center px-4 py-1"
+            ></i>
+            <h2
+              class="text-xl text-center font-medium group-hover:text-white duration-300"
+            >
+              Choose what to Do
+            </h2>
+            <p class="text-center group-hover:text-white duration-300">
+              Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do
+              eiusmod tempor incididunt ut laboremagna aliqua.
+            </p>
+            <button
+              class="bg-transparent border-[1px] px-3 py-2 rounded-sm group-hover:text-orange-500 group-hover:bg-white duration-300"
+            >
+              Read More
+            </button>
+          </div>
+          <div
+            class="bg-white flex flex-col items-center justify-center gap-y-5 p-10 group hover:bg-orange-500 duration-300 max-w-96 shadow-md"
+          >
+            <i
+              class="flaticon-transport bg-slate-200 rounded-full text-center px-4 py-1"
+            ></i>
+            <h2
+              class="text-xl text-center font-medium group-hover:text-white duration-300"
+            >
+              Find what you want
+            </h2>
+            <p class="text-center group-hover:text-white duration-300">
+              Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do
+              eiusmod tempor incididunt ut laboremagna aliqua.
+            </p>
+            <button
+              class="bg-transparent border-[1px] px-3 py-2 rounded-sm group-hover:text-orange-500 group-hover:bg-white duration-300"
+            >
+              Read More
+            </button>
+          </div>
+          <div
+            class="bg-white flex flex-col items-center justify-center gap-y-5 p-10 group hover:bg-orange-500 duration-300 max-w-96 shadow-md"
+          >
+            <i
+              class="flaticon-location-on-road bg-slate-200 rounded-full text-center px-4 py-1"
+            ></i>
+            <h2
+              class="text-xl text-center font-medium group-hover:text-white duration-300"
+            >
+              Explore amazing Place
+            </h2>
+            <p class="text-center group-hover:text-white duration-300">
+              Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do
+              eiusmod tempor incididunt ut laboremagna aliqua.
+            </p>
+            <button
+              class="bg-transparent border-[1px] px-3 py-2 rounded-sm group-hover:text-orange-500 group-hover:bg-white duration-300"
+            >
+              Read More
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Explore section starts here  -->
+    <section id="Explore" class="w-full bg-slate-100">
+      <div class="container mx-auto my-14 py-14">
+        <div>
+          <h1 class="text-gray-800 text-center font-medium text-4xl">
+            EXPLORE
+          </h1>
+          <p class="text-center text-gray-700 mt-2">
+            Explore New place, food, culture around the world and many more
+          </p>
+        </div>
+        <div class="mt-10 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- explore card 1  -->
+          <div class="max-w-96 mx-auto bg-white group hover:shadow-lg">
+            <div class="relative overflow-hidden">
+              <img
+                class="w-full mx-auto"
+                src="/assets/images/explore/e1.jpg"
+                alt="img"
+              />
+              <div
+                class="absolute -bottom-10 group-hover:bottom-2 group-hover:duration-300 px-2 w-full flex items-center justify-between"
+              >
+                <button class="explore-btn">Best Rated</button>
+                <div>
+                  <a class="bg-gray-900 w-3 py-1 px-2" href="#"
+                    ><i class="fa fa-arrows-alt text-gray-300"></i
+                  ></a>
+                  <a class="bg-gray-900 w-3 py-1 px-2" href="#"
+                    ><i class="fa-regular fa-bookmark text-gray-300"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h2 class="font-medium mb-3">Tommy Helfinger Bar</h2>
+              <div class="flex gap-x-2 items-center">
+                <p
+                  class="bg-blue-400 px-1 py-[1px] rounded-sm text-white text-xs"
+                >
+                  5.0
+                </p>
+                <p class="text-xs text-gray-600">10 Ratings</p>
+                <p
+                  class="text-xs text-gray-600 border-l-[1px] border-r-[1px] border-gray-400 px-2"
+                >
+                  From <span class="text-red-400">5$-300$</span>
+                </p>
+                <p class="text-xs text-gray-600">Resturent</p>
+              </div>
+              <div class="mt-4">
+                <img src="/assets/images/clients/c1.png" alt="img" />
+                <p class="text-xs text-gray-500 mt-1">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incid ut labore et dolore magna aliqua....
+                </p>
+              </div>
+              <hr class="my-5" />
+              <div>
+                <a class="text-sm font-light text-red-500" href="#"
+                  >Close Now</a
+                >
+                <div class="flex gap-x-5 mt-4">
+                  <i class="fa-solid fa-location-dot text-sm text-gray-600"></i>
+                  <i
+                    class="fa-solid fa-arrow-up-from-bracket text-sm text-gray-600"
+                  ></i>
+                  <i class="fa-regular fa-heart text-sm text-gray-600"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- explore card 2  -->
+          <div class="max-w-96 mx-auto bg-white group hover:shadow-lg">
+            <div class="relative overflow-hidden">
+              <img
+                class="w-full mx-auto"
+                src="/assets/images/explore/e2.jpg"
+                alt="img"
+              />
+              <div
+                class="absolute -bottom-10 group-hover:bottom-2 group-hover:duration-300 px-2 w-full flex items-center justify-between"
+              >
+                <button class="explore-btn">Featured</button>
+                <div>
+                  <a class="bg-gray-900 w-3 py-1 px-2" href="#"
+                    ><i class="fa fa-arrows-alt text-gray-300"></i
+                  ></a>
+                  <a class="bg-gray-900 w-3 py-1 px-2" href="#"
+                    ><i class="fa-regular fa-bookmark text-gray-300"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h2 class="font-medium mb-3">Swim And Dine Resort</h2>
+              <div class="flex gap-x-2 items-center">
+                <p
+                  class="bg-green-500 px-1 py-[1px] rounded-sm text-white text-xs"
+                >
+                  4.5
+                </p>
+                <p class="text-xs text-gray-600">8 Ratings</p>
+                <p
+                  class="text-xs text-gray-600 border-l-[1px] border-r-[1px] border-gray-400 px-2"
+                >
+                  From <span class="text-red-400">50$-500$</span>
+                </p>
+                <p class="text-xs text-gray-600">Hotel</p>
+              </div>
+              <div class="mt-4">
+                <img src="/assets/images/clients/c2.png" alt="img" />
+                <p class="text-xs text-gray-500 mt-1">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incid ut labore et dolore magna aliqua....
+                </p>
+              </div>
+              <hr class="my-5" />
+              <div>
+                <a class="text-sm font-light text-green-500" href="#"
+                  >Open Now</a
+                >
+                <div class="flex gap-x-5 mt-4">
+                  <i class="fa-solid fa-location-dot text-sm text-gray-600"></i>
+                  <i
+                    class="fa-solid fa-arrow-up-from-bracket text-sm text-gray-600"
+                  ></i>
+                  <i class="fa-regular fa-heart text-sm text-gray-600"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- explore card 3  -->
+          <div class="max-w-96 mx-auto bg-white group hover:shadow-lg">
+            <div class="relative overflow-hidden">
+              <img
+                class="w-full mx-auto"
+                src="/assets/images/explore/e3.jpg"
+                alt="img"
+              />
+              <div
+                class="absolute -bottom-10 group-hover:bottom-2 group-hover:duration-300 px-2 w-full flex items-center justify-between"
+              >
+                <button class="explore-btn">Best Rated</button>
+                <div>
+                  <a class="bg-gray-900 w-3 py-1 px-2" href="#"
+                    ><i class="fa fa-arrows-alt text-gray-300"></i
+                  ></a>
+                  <a class="bg-gray-900 w-3 py-1 px-2" href="#"
+                    ><i class="fa-regular fa-bookmark text-gray-300"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h2 class="font-medium mb-3">Europe Tour</h2>
+              <div class="flex gap-x-2 items-center">
+                <p
+                  class="bg-yellow-400 px-1 py-[1px] rounded-sm text-white text-xs"
+                >
+                  5.0
+                </p>
+                <p class="text-xs text-gray-600">15 Ratings</p>
+                <p
+                  class="text-xs text-gray-600 border-l-[1px] border-r-[1px] border-gray-400 px-2"
+                >
+                  From <span class="text-red-400">5k$-10k$</span>
+                </p>
+                <p class="text-xs text-gray-600">Destination</p>
+              </div>
+              <div class="mt-4">
+                <img src="/assets/images/clients/c3.png" alt="img" />
+                <p class="text-xs text-gray-500 mt-1">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incid ut labore et dolore magna aliqua....
+                </p>
+              </div>
+              <hr class="my-5" />
+              <div>
+                <a class="text-sm font-light text-red-500" href="#"
+                  >Close Now</a
+                >
+                <div class="flex gap-x-5 mt-4">
+                  <i class="fa-solid fa-location-dot text-sm text-gray-600"></i>
+                  <i
+                    class="fa-solid fa-arrow-up-from-bracket text-sm text-gray-600"
+                  ></i>
+                  <i class="fa-regular fa-heart text-sm text-gray-600"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- explore card 4 -->
+          <div class="max-w-96 mx-auto bg-white group hover:shadow-lg">
+            <div class="relative overflow-hidden">
+              <img
+                class="w-full mx-auto"
+                src="/assets/images/explore/e4.jpg"
+                alt="img"
+              />
+              <div
+                class="absolute -bottom-10 group-hover:bottom-2 group-hover:duration-300 px-2 w-full flex items-center justify-between"
+              >
+                <button class="explore-btn">Most View</button>
+                <div>
+                  <a class="bg-gray-900 w-3 py-1 px-2" href="#"
+                    ><i class="fa fa-arrows-alt text-gray-300"></i
+                  ></a>
+                  <a class="bg-gray-900 w-3 py-1 px-2" href="#"
+                    ><i class="fa-regular fa-bookmark text-gray-300"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h2 class="font-medium mb-3">Banglow With Swiming Pool</h2>
+              <div class="flex gap-x-2 items-center">
+                <p
+                  class="bg-indigo-400 px-1 py-[1px] rounded-sm text-white text-xs"
+                >
+                  5.0
+                </p>
+                <p class="text-xs text-gray-600">10 Ratings</p>
+                <p
+                  class="text-xs text-gray-600 border-l-[1px] border-r-[1px] border-gray-400 px-2"
+                >
+                  From <span class="text-red-400">5k$-10k$</span>
+                </p>
+                <p class="text-xs text-gray-600">Real Estate</p>
+              </div>
+              <div class="mt-4">
+                <img src="/assets/images/clients/c4.png" alt="img" />
+                <p class="text-xs text-gray-500 mt-1">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incid ut labore et dolore magna aliqua....
+                </p>
+              </div>
+              <hr class="my-5" />
+              <div>
+                <a class="text-sm font-light text-red-500" href="#"
+                  >Close Now</a
+                >
+                <div class="flex gap-x-5 mt-4">
+                  <i class="fa-solid fa-location-dot text-sm text-gray-600"></i>
+                  <i
+                    class="fa-solid fa-arrow-up-from-bracket text-sm text-gray-600"
+                  ></i>
+                  <i class="fa-regular fa-heart text-sm text-gray-600"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- explore card 5  -->
+          <div class="max-w-96 mx-auto bg-white group hover:shadow-lg">
+            <div class="relative overflow-hidden">
+              <img
+                class="w-full mx-auto"
+                src="/assets/images/explore/e5.jpg"
+                alt="img"
+              />
+              <div
+                class="absolute -bottom-10 group-hover:bottom-2 group-hover:duration-300 px-2 w-full flex items-center justify-between"
+              >
+                <button class="explore-btn">Featured</button>
+                <div>
+                  <a class="bg-gray-900 w-3 py-1 px-2" href="#"
+                    ><i class="fa fa-arrows-alt text-gray-300"></i
+                  ></a>
+                  <a class="bg-gray-900 w-3 py-1 px-2" href="#"
+                    ><i class="fa-regular fa-bookmark text-gray-300"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h2 class="font-medium mb-3">Vintage Car Expo</h2>
+              <div class="flex gap-x-2 items-center">
+                <p
+                  class="bg-green-500 px-1 py-[1px] rounded-sm text-white text-xs"
+                >
+                  4.3
+                </p>
+                <p class="text-xs text-gray-600">8 Ratings</p>
+                <p
+                  class="text-xs text-gray-600 border-l-[1px] border-r-[1px] border-gray-400 px-2"
+                >
+                  From <span class="text-red-400">500$-1300$</span>
+                </p>
+                <p class="text-xs text-gray-600">Automotion</p>
+              </div>
+              <div class="mt-4">
+                <img src="/assets/images/clients/c2.png" alt="img" />
+                <p class="text-xs text-gray-500 mt-1">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incid ut labore et dolore magna aliqua....
+                </p>
+              </div>
+              <hr class="my-5" />
+              <div>
+                <a class="text-sm font-light text-green-500" href="#"
+                  >Open Now</a
+                >
+                <div class="flex gap-x-5 mt-4">
+                  <i class="fa-solid fa-location-dot text-sm text-gray-600"></i>
+                  <i
+                    class="fa-solid fa-arrow-up-from-bracket text-sm text-gray-600"
+                  ></i>
+                  <i class="fa-regular fa-heart text-sm text-gray-600"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- explore card 6 -->
+          <div class="max-w-96 mx-auto bg-white group hover:shadow-lg">
+            <div class="relative overflow-hidden">
+              <img
+                class="w-full mx-auto"
+                src="/assets/images/explore/e6.jpg"
+                alt="img"
+              />
+              <div
+                class="absolute -bottom-10 group-hover:bottom-2 group-hover:duration-300 px-2 w-full flex items-center justify-between"
+              >
+                <button class="explore-btn">Best Rated</button>
+                <div>
+                  <a class="bg-gray-900 w-3 py-1 px-2" href="#"
+                    ><i class="fa fa-arrows-alt text-gray-300"></i
+                  ></a>
+                  <a class="bg-gray-900 w-3 py-1 px-2" href="#"
+                    ><i class="fa-regular fa-bookmark text-gray-300"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h2 class="font-medium mb-3">Thailand Tour</h2>
+              <div class="flex gap-x-2 items-center">
+                <p
+                  class="bg-yellow-500 px-1 py-[1px] rounded-sm text-white text-xs"
+                >
+                  5.0
+                </p>
+                <p class="text-xs text-gray-600">14 Ratings</p>
+                <p
+                  class="text-xs text-gray-600 border-l-[1px] border-r-[1px] border-gray-400 px-2"
+                >
+                  From <span class="text-red-400">5k$-10k$</span>
+                </p>
+                <p class="text-xs text-gray-600">Destination</p>
+              </div>
+              <div class="mt-4">
+                <img src="/assets/images/clients/c1.png" alt="img" />
+                <p class="text-xs text-gray-500 mt-1">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incid ut labore et dolore magna aliqua....
+                </p>
+              </div>
+              <hr class="my-5" />
+              <div>
+                <a class="text-sm font-light text-red-500" href="#"
+                  >Close Now</a
+                >
+                <div class="flex gap-x-5 mt-4">
+                  <i class="fa-solid fa-location-dot text-sm text-gray-600"></i>
+                  <i
+                    class="fa-solid fa-arrow-up-from-bracket text-sm text-gray-600"
+                  ></i>
+                  <i class="fa-regular fa-heart text-sm text-gray-600"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CLIENTS REVIEWS section starts here  -->
+    <section id="Review" class="w-full">
+      <div class="container mx-auto py-20 px-2">
+        <div>
+          <h1 class="text-gray-700 text-center font-medium text-3xl">
+            CLIENTS REVIEWS
+          </h1>
+          <p class="text-center text-gray-700 mt-2">
+            What our client say about us
+          </p>
+        </div>
+        <div
+          class="grid justify-items-center sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10"
+        >
+          <!-- card 1 -->
+          <div
+            class="bg-white max-w-lg py-10 px-8 rounded-md hover:shadow-lg snap-center"
+          >
+            <div class="flex items-center gap-x-5">
+              <div><img src="/assets/images/clients/c1.png" alt="img" /></div>
+              <div class="">
+                <h2 class="font-semibold text-lg text-gray-700">Tom Leaker</h2>
+                <h4 class="text-gray-500 text-sm">london, UK</h4>
+                <div class="text-yellow-300 text-sm">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm mt-5">
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum. Sed ut perspiciatis
+              eaque.
+            </p>
+          </div>
+          <!-- card 2 -->
+          <div
+            class="bg-white max-w-lg py-10 px-8 rounded-md hover:shadow-lg snap-center"
+          >
+            <div class="flex items-center gap-x-5">
+              <div><img src="/assets/images/clients/c2.png" alt="img" /></div>
+              <div class="">
+                <h2 class="font-semibold text-lg text-gray-700">Alex Plavi</h2>
+                <h4 class="text-gray-500 text-sm">london, UK</h4>
+                <div class="text-yellow-300 text-sm">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm mt-5">
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum. Sed ut perspiciatis
+              eaque.
+            </p>
+          </div>
+          <!-- card 3 -->
+          <div
+            class="bg-white max-w-lg py-10 px-8 rounded-md hover:shadow-lg snap-center"
+          >
+            <div class="flex items-center gap-x-5">
+              <div><img src="/assets/images/clients/c3.png" alt="img" /></div>
+              <div class="">
+                <h2 class="font-semibold text-lg text-gray-700">Malek Mint</h2>
+                <h4 class="text-gray-500 text-sm">Canada, UK</h4>
+                <div class="text-yellow-300 text-sm">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm mt-5">
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum. Sed ut perspiciatis
+              eaque.
+            </p>
+          </div>
+          <!-- card 4 -->
+          <div
+            class="bg-white max-w-lg py-10 px-8 rounded-md hover:shadow-lg snap-center"
+          >
+            <div class="flex items-center gap-x-5">
+              <div><img src="/assets/images/clients/c4.png" alt="img" /></div>
+              <div>
+                <h2 class="font-semibold text-lg text-gray-700">Riti Clice</h2>
+                <h4 class="text-gray-500 text-sm">london, UK</h4>
+                <div class="text-yellow-300 text-sm">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm mt-5">
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum. Sed ut perspiciatis
+              eaque.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- counter  section starts here  -->
+    <section
+      class="bg-[url('/assets/images/counter/counter-banner.jpg')] bg-center bg-no-repeat bg-cover bg-fixed"
+    >
+      <div class="bg-gray-900/60">
+        <div
+          class="container mx-auto grid justify-items-center sm:grid-cols-2 lg:grid-cols-4 gap-y-10 py-20 lg:py-28 px-4"
+        >
+          <div class="flex flex-col justify-center items-center gap-y-2">
+            <h1 class="text-5xl font-medium text-white">90k+</h1>
+            <h3 class="text-white font-medium">Listings</h3>
+          </div>
+          <div class="flex flex-col justify-center items-center gap-y-2">
+            <h1 class="text-5xl font-medium text-white">40k+</h1>
+            <h3 class="text-white font-medium">Listing Categories</h3>
+          </div>
+          <div class="flex flex-col justify-center items-center gap-y-2">
+            <h1 class="text-5xl font-medium text-white">65k+</h1>
+            <h3 class="text-white font-medium">Visitors</h3>
+          </div>
+          <div class="flex flex-col justify-center items-center gap-y-2">
+            <h1 class="text-5xl font-medium text-white">50k+</h1>
+            <h3 class="text-white font-medium">Happy Clients</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- news and articles section starts here   -->
+    <section id="Blog">
+      <div class="container mx-auto py-20 px-2">
+        <div>
+          <h1 class="text-gray-700 text-center font-medium text-3xl">
+            NEWS AND ARTICLES
+          </h1>
+          <p class="text-center text-gray-700 mt-2">
+            Always upto date with our latest News and Articles
+          </p>
+        </div>
+        <div
+          class="grid justify-items-center gap-5 sm:grid-cols-2 lg:grid-cols-3 py-10"
+        >
+          <!-- card 1 -->
+          <div class="bg-white group hover:shadow-lg duration-300 max-w-md">
+            <div class="max-w-full">
+              <img class="w-full" src="/assets/images/blog/b1.jpg" alt="img" />
+            </div>
+            <div class="py-7 px-4">
+              <h2>
+                <a
+                  class="text-xl group-hover:text-orange-500 duration-300"
+                  href="#"
+                  >How to find your Desired Place more quickly</a
+                >
+              </h2>
+              <h4 class="py-4 text-gray-600">
+                Posted <span>By</span>
+                <a
+                  class="text-black font-medium border-r border-gray-400 pr-2 mr-2"
+                  href="#"
+                  >ADMIN</a
+                >
+                March 2018
+              </h4>
+              <p class="text-gray-600">
+                Lorem ipsum dolor sit amet, consectetur de adipisicing elit, sed
+                do eiusmod tempore incididunt ut labore et dolore magna.
+              </p>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div class="bg-white group hover:shadow-lg duration-300 max-w-md">
+            <div class="max-w-full">
+              <img class="w-full" src="/assets/images/blog/b2.jpg" alt="img" />
+            </div>
+            <div class="py-7 px-4">
+              <h2>
+                <a
+                  class="text-xl group-hover:text-orange-500 duration-300"
+                  href="#"
+                  >How to find your Desired Place more quickly</a
+                >
+              </h2>
+              <h4 class="py-4 text-gray-600">
+                Posted <span>By</span>
+                <a
+                  class="text-black font-medium border-r border-gray-400 pr-2 mr-2"
+                  href="#"
+                  >ADMIN</a
+                >
+                March 2018
+              </h4>
+              <p class="text-gray-600">
+                Lorem ipsum dolor sit amet, consectetur de adipisicing elit, sed
+                do eiusmod tempore incididunt ut labore et dolore magna.
+              </p>
+            </div>
+          </div>
+          <!-- card 3 -->
+          <div class="bg-white group hover:shadow-lg duration-300 max-w-md">
+            <div class="max-w-full">
+              <img class="w-full" src="/assets/images/blog/b3.jpg" alt="img" />
+            </div>
+            <div class="py-7 px-4">
+              <h2>
+                <a
+                  class="text-xl group-hover:text-orange-500 duration-300"
+                  href="#"
+                  >How to find your Desired Place more quickly</a
+                >
+              </h2>
+              <h4 class="py-4 text-gray-600">
+                Posted <span>By</span>
+                <a
+                  class="text-black font-medium border-r border-gray-400 pr-2 mr-2"
+                  href="#"
+                  >ADMIN</a
+                >
+                March 2018
+              </h4>
+              <p class="text-gray-600">
+                Lorem ipsum dolor sit amet, consectetur de adipisicing elit, sed
+                do eiusmod tempore incididunt ut labore et dolore magna.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- create account section starts here  -->
+    <section id="Contact" class="bg-white">
+      <div class="container mx-auto px-2 py-20">
+        <div>
+          <h1 class="text-gray-700 text-center font-medium text-xl">
+            DO YOU WANT TO ADD YOUR BUSINESS LISTING WITH US?
+          </h1>
+          <p class="text-center text-gray-700 my-5">
+            Listrace offer you to list your business with us and we very much
+            able to promote your Business.
+          </p>
+        </div>
+        <div
+          class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-0 mt-20"
+        >
+          <input
+            type="email"
+            placeholder="Enter your email here"
+            class="bg-slate-100 w-9/12 md:w-1/2 rounded-sm drop-shadow-lg hover:shadow-xl outline-none px-3 py-4 text-gray-700 text-lg"
+          />
+          <button
+            class="bg-orange-500 px-12 py-5 rounded-sm text-white font-semibold"
+          >
+            Creat Account
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- footer section starts here  -->
+    <footer>
+      <div
+        class="container mx-auto flex flex-col md:flex-row justify-center md:justify-around gap-5 items-center px-2 py-10"
+      >
+        <h4 class="text-gray-600">
+          ©Copyright. Designed And Developed By Shobuj
+        </h4>
+        <div class="flex justify-between items-center gap-x-10">
+          <h4
+            class="flex items-center text-gray-500 hover:text-orange-500 duration-300"
+          >
+            <i class="fa-solid fa-phone"></i>
+            <p>+8801309919260</p>
+          </h4>
+          <div class="flex items-center justify-center gap-5">
+            <i class="fa-brands fa-facebook-f social-icon"></i>
+            <i class="fa-brands fa-twitter social-icon"></i>
+            <i class="fa-brands fa-linkedin-in social-icon"></i>
+            <i class="fa-brands fa-google-plus-g social-icon"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- javascript file link  -->
+    <script src="script.js"></script>
+  </body>
+</html>
