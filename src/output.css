@@ -613,10 +613,6 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.fixed {
-  position: fixed;
-}
-
 .absolute {
   position: absolute;
 }
@@ -637,52 +633,16 @@ video {
   right: 0px;
 }
 
-.top-\[-100\%\] {
-  top: -100%;
-}
-
-.top-\[60px\] {
-  top: 60px;
-}
-
 .top-0 {
   top: 0px;
-}
-
-.left-0 {
-  left: 0px;
-}
-
-.-top-0 {
-  top: -0px;
-}
-
-.top-full {
-  top: 100%;
-}
-
-.-top-full {
-  top: -100%;
-}
-
-.top-\[-200px\] {
-  top: -200px;
 }
 
 .top-\[-300px\] {
   top: -300px;
 }
 
-.top-\[10px\] {
-  top: 10px;
-}
-
 .top-\[50px\] {
   top: 50px;
-}
-
-.top-\[80px\] {
-  top: 80px;
 }
 
 .z-50 {
@@ -861,6 +821,11 @@ video {
   gap: 2rem;
 }
 
+.gap-x-10 {
+  -moz-column-gap: 2.5rem;
+       column-gap: 2.5rem;
+}
+
 .gap-x-2 {
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
@@ -893,11 +858,6 @@ video {
 
 .gap-y-5 {
   row-gap: 1.25rem;
-}
-
-.gap-x-10 {
-  -moz-column-gap: 2.5rem;
-       column-gap: 2.5rem;
 }
 
 .overflow-hidden {
@@ -985,11 +945,6 @@ video {
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
 }
 
-.bg-slate-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
-}
-
 .bg-slate-800\/40 {
   background-color: rgb(30 41 59 / 0.4);
 }
@@ -1019,6 +974,14 @@ video {
 
 .bg-\[url\(\'\/assets\/images\/welcome-hero\/banner\.jpg\'\)\] {
   background-image: url('/assets/images/welcome-hero/banner.jpg');
+}
+
+.bg-\[url\(\'\.\.\/assets\/images\/welcome-hero\/banner\.jpg\'\)\] {
+  background-image: url('../assets/images/welcome-hero/banner.jpg');
+}
+
+.bg-\[url\(\'\.\.\/assets\/images\/counter\/counter-banner\.jpg\'\)\] {
+  background-image: url('../assets/images/counter/counter-banner.jpg');
 }
 
 .bg-cover {
@@ -1131,18 +1094,6 @@ video {
 
 .pr-2 {
   padding-right: 0.5rem;
-}
-
-.pt-10 {
-  padding-top: 2.5rem;
-}
-
-.pt-20 {
-  padding-top: 5rem;
-}
-
-.pt-32 {
-  padding-top: 8rem;
 }
 
 .text-center {
